@@ -1,5 +1,3 @@
-from crypt import methods
-import imp
 from flask import Flask, render_template
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField
@@ -14,7 +12,7 @@ def create_app():
 
     @app.route('/', methods=['GET', 'POST'])
     def index():
-        form = LoginForm
+        form = LoginForm()
 
         return render_template('index.html', form=form)
 

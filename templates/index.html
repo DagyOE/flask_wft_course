@@ -9,7 +9,12 @@
 <body>
     <h1>Login Form</h1>
     <form method="POST" action="/">
-        
+        {{ form.csrf_token }}
+        {{ form.username.label }}
+        {{ form.username }}
+        {{ form.password.label }}
+        {{ form.password }}
+        <button >Login</button>
     </form>
 </body>
 </html>
